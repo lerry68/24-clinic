@@ -1,0 +1,9 @@
+#surefire
+#Tue Jan 24 22:47:17 ICT 2023
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=D\:\\Programming\\Java\\Assignments\\24-clinic
+file.encoding=UTF-8
+localRepository=C\:\\Users\\FarrelAkiela\\.m2\\repository
+netbeans.deploy=true
+netbeans.deploy.clientUrlPart=/index.jsp
+basedir=D\:\\Programming\\Java\\Assignments\\24-clinic
