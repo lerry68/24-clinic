@@ -41,9 +41,9 @@
    <body>
       <%@include file="component/navbar.jsp"%>
       
-      <% Connection conn=DBConnect.getConn();
+      <%-- <% Connection conn=DBConnect.getConn();
       out.print(conn);
-      %>
+      %> --%>
 
       <div id="carouselExampleIndicators" class="carousel slide">
          <div class="carousel-indicators">
