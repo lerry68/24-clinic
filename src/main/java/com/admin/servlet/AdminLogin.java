@@ -31,11 +31,11 @@ public class AdminLogin extends HttpServlet {
 
 			HttpSession session = req.getSession();
 
-			if ("admin@gmail.com".equals(email) && "admin".equals(password)) {
+			if ("admin@mail.com".equals(email) && "admin123".equals(password)) {
 				session.setAttribute("adminObj", new User());
 				resp.sendRedirect("admin/index.jsp");
 			} else {
-				session.setAttribute("errorMsg", "Email atau password anda salah");
+				session.setAttribute("errorMsg", "Wrong Email or Password!");
 				resp.sendRedirect("admin_login.jsp");
 			}
 

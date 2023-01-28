@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2023 at 03:49 PM
+-- Generation Time: Jan 28, 2023 at 07:18 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.24
 
@@ -53,10 +53,19 @@ CREATE TABLE `doctor` (
   `full_name` varchar(45) NOT NULL,
   `dob` varchar(45) NOT NULL,
   `qualification` varchar(45) NOT NULL,
+  `specialist` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `mobno` varchar(45) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `doctor`
+--
+
+INSERT INTO `doctor` (`id`, `full_name`, `dob`, `qualification`, `specialist`, `email`, `mobno`, `password`) VALUES
+(1, 'Adi Primata', '1993-03-20', 'Sp.KG', 'Dentist', 'adi.primate@mail.com', '081295738142', 'adi123'),
+(2, 'Aryo Gabus', '1988-12-01', 'Sp.M', 'Ophthalmologist', 'aryo.gabus@mail.com', '081387272927', 'aryo123');
 
 -- --------------------------------------------------------
 
@@ -66,8 +75,16 @@ CREATE TABLE `doctor` (
 
 CREATE TABLE `specialist` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL
+  `spec_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `specialist`
+--
+
+INSERT INTO `specialist` (`id`, `spec_name`) VALUES
+(1, 'Dentist'),
+(4, 'Ophthalmologist');
 
 -- --------------------------------------------------------
 
@@ -81,6 +98,14 @@ CREATE TABLE `user_dtls` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_dtls`
+--
+
+INSERT INTO `user_dtls` (`id`, `full_name`, `email`, `password`) VALUES
+(1, 'Farrel Akiela', 'farrel@mail.com', 'farrel123'),
+(2, 'John Doe', 'johndoe@yahoo.co.id', 'john123');
 
 --
 -- Indexes for dumped tables
@@ -110,7 +135,8 @@ ALTER TABLE `specialist`
 -- Indexes for table `user_dtls`
 --
 ALTER TABLE `user_dtls`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -126,19 +152,19 @@ ALTER TABLE `appointment`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `specialist`
 --
 ALTER TABLE `specialist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_dtls`
 --
 ALTER TABLE `user_dtls`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

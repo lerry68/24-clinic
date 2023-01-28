@@ -1,13 +1,10 @@
 <%-- 
     Document   : index
     Created on : 16-Jan-2023, 11:00:36
-    Author     : FarrelAkiela
+    Author     : garest
 --%>
 
-<%@page import="com.db.DBConnect" %>
-<%@page import="java.sql.Connection" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -40,10 +37,6 @@
    </head>
    <body>
       <%@include file="component/navbar.jsp"%>
-      
-      <%-- <% Connection conn=DBConnect.getConn();
-      out.print(conn);
-      %> --%>
 
       <div id="carouselExampleIndicators" class="carousel slide">
          <div class="carousel-indicators">
@@ -53,13 +46,13 @@
          </div>
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img src="images/home1.jpg" class="d-block w-100" alt="..." height="615px">
+               <img src="images/home2.png" class="d-block w-100" alt="..." height="615px">
             </div>
             <div class="carousel-item">
-               <img src="images/home1.jpg" class="d-block w-100" alt="..." height="615px">
+               <img src="images/home3.jpg" class="d-block w-100" alt="..." height="615px">
             </div>
             <div class="carousel-item">
-               <img src="images/home1.jpg" class="d-block w-100" alt="..." height="615px">
+               <img src="images/home4.jpg" class="d-block w-100" alt="..." height="615px">
             </div>
          </div>
          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

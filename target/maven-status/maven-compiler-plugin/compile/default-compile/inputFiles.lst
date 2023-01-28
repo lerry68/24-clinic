@@ -1,4 +1,10 @@
+D:\Programming\Java\Assignments\24-clinic\src\main\java\com\admin\servlet\AdminLogout.java
 D:\Programming\Java\Assignments\24-clinic\src\main\java\com\entity\User.java
 D:\Programming\Java\Assignments\24-clinic\src\main\java\com\dao\UserDao.java
 D:\Programming\Java\Assignments\24-clinic\src\main\java\com\user\servlet\UserRegister.java
+D:\Programming\Java\Assignments\24-clinic\src\main\java\com\dao\DoctorDao.java
+D:\Programming\Java\Assignments\24-clinic\src\main\java\com\user\servlet\UserLogin.java
+D:\Programming\Java\Assignments\24-clinic\src\main\java\com\user\servlet\UserLogout.java
 D:\Programming\Java\Assignments\24-clinic\src\main\java\com\db\DBConnect.java
+D:\Programming\Java\Assignments\24-clinic\src\main\java\com\entity\Doctor.java
+D:\Programming\Java\Assignments\24-clinic\src\main\java\com\admin\servlet\AdminLogin.java

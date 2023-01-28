@@ -23,20 +23,24 @@
       <%@include file="component/navbar.jsp"%>
 
       <div class="container p-5">
+
+         <c:if test="${not empty succMsg }">
+            <p class="text-center text-success fs-5"><b>${succMsg}</b></p>
+            <br>
+            <c:remove var="succMsg" scope="session" />
+         </c:if>
+
+         <c:if test="${not empty errorMsg }">
+            <p class="text-center text-danger fs-5"><b>${errorMsg}</b></p>
+            <br>
+            <c:remove var="errorMsg" scope="session" />
+         </c:if>
+
          <div class="row">
             <div class="col-md-4 offset-md-4">
                <div class="card paint-card">
                   <div class="card-body">
-                     <p class="fs-4 text-center">Admin Login</p>
-                     <c:if test="${not empty succMsg }">
-                        <p class="text-center text-success fs-3">${succMsg}</p>
-                        <c:remove var="succMsg" scope="session" />
-                     </c:if>
-
-                     <c:if test="${not empty errorMsg }">
-                        <p class="text-center text-danger fs-5">${errorMsg}</p>
-                        <c:remove var="errorMsg" scope="session" />
-                     </c:if>
+                     <p class="fs-4 mb-4 text-center"><b>ADMIN LOGIN</b></p>
 
                      <form action="adminLogin" method="post">
                         <div class="mb-3">
@@ -49,7 +53,7 @@
                                                                              name="password" type="password" class="form-control">
                         </div>
 
-                        <button type="submit" class="btn bg-success text-white col-md-12">Login</button>
+                        <button type="submit" class="btn bg-danger text-white col-md-12 mt-3 mb-2">Login</button>
                      </form>
                   </div>
                </div>

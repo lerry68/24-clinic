@@ -1,14 +1,4 @@
-<%-- 
-    Document   : signup
-    Created on : 16-Jan-2023, 13:24:57
-    Author     : FarrelAkiela
---%>
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -29,7 +19,7 @@
             <div class="col-md-4 offset-md-4">
                <div class="card paint-card">
                   <div class="card-body">
-                     <p class="fs-4 text-center">User Register</p>
+                     <p class="fs-4 mb-4 text-center"><b>USER REGISTER</b></p>
 
                      <c:if test="${not empty sucMsg }">
                         <p class="text-center text-success fs-3">${sucMsg}</p>
@@ -56,7 +46,8 @@
                                                                              name="password" type="password" class="form-control">
                         </div>
 
-                        <button type="submit" class="btn bg-success text-white col-md-12">Register</button>
+                        <button type="submit" class="btn bg-danger text-white col-md-12 mt-3 mb-2">Register</button>
+                        <br> Already have an account? <a href="user_login.jsp"> please login</a> <br>
                      </form>
                   </div>
                </div>

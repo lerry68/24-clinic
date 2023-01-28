@@ -28,9 +28,9 @@ public class UserLogin extends HttpServlet {
 
 		if (user != null) {
 			session.setAttribute("userObj", user);
-			resp.sendRedirect("user/index.jsp");
+			resp.sendRedirect("index.jsp");
 		} else {
-			session.setAttribute("errorMsg", "invalid email & password");
+			session.setAttribute("errorMsg", "Wrong Email or Password!");
 			resp.sendRedirect("user_login.jsp");
 		}
 
