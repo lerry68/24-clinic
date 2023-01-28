@@ -1,7 +1,7 @@
 <%-- 
     Document   : doctor_login
     Created on : 16-Jan-2023, 11:13:04
-    Author     : FarrelAkiela
+    Author     : garest
 --%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

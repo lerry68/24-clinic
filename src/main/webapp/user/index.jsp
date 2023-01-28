@@ -11,7 +11,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Home | 24-Clinic</title>
 
-      <%@include file="component/allcss.jsp"%>
+      <%@include file="../component/allcss.jsp"%>
 
       <style type="text/css">
          .carousel-item:after {
@@ -36,7 +36,7 @@
 
    </head>
    <body>
-      <%@include file="component/navbar.jsp"%>
+      <%@include file="navuser.jsp"%>
 
       <div id="carouselExampleIndicators" class="carousel slide">
          <div class="carousel-indicators">
@@ -46,13 +46,13 @@
          </div>
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img src="images/home2.png" class="d-block w-100" alt="..." height="615px">
+               <img src="../images/home1.jpg" class="d-block w-100" alt="..." height="615px">
             </div>
             <div class="carousel-item">
-               <img src="images/home3.jpg" class="d-block w-100" alt="..." height="615px">
+               <img src="../images/home1.jpg" class="d-block w-100" alt="..." height="615px">
             </div>
             <div class="carousel-item">
-               <img src="images/home4.jpg" class="d-block w-100" alt="..." height="615px">
+               <img src="../images/home1.jpg" class="d-block w-100" alt="..." height="615px">
             </div>
          </div>
          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -113,13 +113,13 @@
             </div>
 
             <div class="col-md-4">
-               <img alt="" src="images/doctor.jpg" height="400px">
+               <img alt="" src="../images/doctor.jpg" height="400px">
             </div>
 
          </div>
       </div>
 
-<%@include file="component/footer.jsp"%>
+<%@include file="../component/footer.jsp"%>
 
 
    </body>
