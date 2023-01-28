@@ -18,15 +18,19 @@ public class DBConnect {
 
    public static Connection getConn() {
       try {
-         Class.forName("com.mysql.cj.jdbc.Driver");
+         Class.forName("com.mysql.jdbc.Driver");
          conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/24_clinic", "root", "");
+         System.out.println("Koneksi Sukses");
 
       }
       catch (Exception e) {
          e.printStackTrace();
+         System.out.println("gagal");
       }
 
       return conn;
    }
 
-}
+   public static void main(String[] args){
+        getConn();
+}}

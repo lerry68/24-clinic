@@ -1,13 +1,11 @@
 <%-- 
     Document   : user_login
     Created on : 16-Jan-2023, 11:12:53
-    Author     : FarrelAkiela
+    Author     : garest
 --%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page isELIgnored="false"%>
 
 <!DOCTYPE html>
 <html>
@@ -32,10 +30,9 @@
                      <p class="fs-4 text-center">User Login</p>
 
                      <c:if test="${not empty succMsg }">
-                        <p class="text-center text-success fs-3">${succMsg}</p>
+                        <p class="text-center text-danger fs-5">${succMsg}</p>
                         <c:remove var="succMsg" scope="session" />
                      </c:if>
-
                      <c:if test="${not empty errorMsg }">
                         <p class="text-center text-danger fs-5">${errorMsg}</p>
                         <c:remove var="errorMsg" scope="session" />
