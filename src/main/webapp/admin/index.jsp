@@ -1,6 +1,6 @@
 <%@page import="com.db.DBConnect"%>
 <%@page import="com.dao.DoctorDao"%>
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -16,6 +16,14 @@
       </style>
    </head>
    <body>
+       
+       <%@include file="navbar.jsp"%>
+
+	<c:if test="${ empty adminObj }">
+		<c:redirect url="../admin_login.jsp"></c:redirect>
+	</c:if>
+
+       
       <%@include file="navbar.jsp"%>
 
       <div class="container p-5">
