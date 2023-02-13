@@ -32,8 +32,8 @@ response.setDateHeader("Expires", 0);
 
 .backImg {
 	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
-		url("img/hospital.jpg");
-	height: 20vh;
+		url("images/user_app_banner.jpg");
+	height: 35vh;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -46,10 +46,10 @@ response.setDateHeader("Expires", 0);
 <div class="container-fulid backImg p-5">
         <p class="text-center fs-2 text-white"></p>
 </div>
-<div class="container p-3">
+<div class="container p-5">
         <div class="row">
-                <div class="col-md-6 p-5">
-                        <img alt="" src="img/doct.jpg">
+                <div class="col-md-6 pe-5 ">
+                        <img alt="" src="images/josins.jpg" style="width: 500px;">
                 </div>
 
                 <div class="col-md-6">

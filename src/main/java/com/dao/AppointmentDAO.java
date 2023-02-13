@@ -27,7 +27,7 @@ public class AppointmentDAO {
 
 		try {
 
-			String sql = "insert into appointment(user_id,fullname,gender,age,appoint_date,email,phno,diseases,doctor_id,address,status) values(?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into appointment(user_id,full_name,gender,age,appoint_date,email,phno,diseases,doctor_id,address,status) values(?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, ap.getUserId());
 			ps.setString(2, ap.getFullName());
@@ -212,5 +212,6 @@ public class AppointmentDAO {
 
 		return list;
 	}
+       
 
 }
