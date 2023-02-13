@@ -33,7 +33,7 @@ response.setDateHeader("Expires", 0);
 .backImg {
 	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
 		url("images/user_app_banner.jpg");
-	height: 35vh;
+	height: 25vh;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -55,7 +55,7 @@ response.setDateHeader("Expires", 0);
                 <div class="col-md-6">
                         <div class="card paint-card">
                                 <div class="card-body">
-                                        <p class="text-center fs-3">User Appointment</p>
+                                        <p class="text-center fs-3 fw-bold text-center text-primary mb-4">User Appointment</p>
                                         <c:if test="${not empty errorMsg}">
                                                 <p class="fs-4 text-center text-danger">${errorMsg}</p>
                                                 <c:remove var="errorMsg" scope="session" />
@@ -137,7 +137,7 @@ response.setDateHeader("Expires", 0);
                                                 </c:if>
 
                                                 <c:if test="${not empty userObj }">
-                                                        <button class="col-md-6 offset-md-3 btn btn-success">Submit</button>
+                                                        <button class="col-md-6 offset-md-3 btn btn-primary">Submit</button>
                                                 </c:if>
                                         </form>
                                 </div>

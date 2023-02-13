@@ -23,9 +23,6 @@
 		<c:redirect url="../admin_login.jsp"></c:redirect>
 	</c:if>
 
-       
-      <%@include file="navbar.jsp"%>
-
       <div class="container p-5">
          <p class="text-center fs-3"><b>ADMIN DASHBOARD</b></p>
          <br><br>
