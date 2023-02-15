@@ -1,28 +1,25 @@
 package com.entity;
 
-/**
- *
- * @author Yogioh
- */
 public class Appointment {
-    private int id;
-    private int userId;
-    private String fullName;
-    private String gender;
-    private String age;
-    private String appoinDate;
-    private String email;
-    private String phNo;
-    private String diseases;
-    private int doctorId;
-    private String address;
-    private String status;
+	private int id;
+	private int userId;
+	private String fullName;
+	private String gender;
+	private String age;
+	private String appoinDate;
+	private String email;
+	private String phNo;
+	private String diseases;
+	private int doctorId;
+	private String address;
+	private String status;
 
-    public Appointment() {
-            super(); 
-}
-    
-public Appointment(int userId, String fullName, String gender, String age, String appoinDate, String email,
+	public Appointment() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Appointment(int userId, String fullName, String gender, String age, String appoinDate, String email,
 			String phNo, String diseases, int doctorId, String address, String status) {
 		super();
 		this.userId = userId;
