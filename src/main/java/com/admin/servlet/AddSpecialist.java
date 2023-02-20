@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.admin.servlet;
 
 import java.io.IOException;
@@ -20,27 +16,29 @@ import com.entity.User;
 
 @WebServlet("/addSpecialist")
 
-/**
- *
- * @author FarrelAkiela
- */
 public class AddSpecialist
         extends HttpServlet {
 
    @Override
    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-      String specName = req.getParameter("specName");
+      String specName = req.getParameter("spec_name");
+      String specDesc = req.getParameter("spec_desc");
+
 
       SpecialistDao dao = new SpecialistDao(DBConnect.getConn());
-      boolean f = dao.addSpecialist(specName);
+      boolean f = dao.addSpecialist(specName, specDesc);
 
       HttpSession session = req.getSession();
 
       if (f) {
+          System.out.println(f);
+          
          session.setAttribute("succMsg", "Specialist added successfully..");
          resp.sendRedirect("admin/index.jsp");
       }
       else {
+          System.out.println(f);
+          
          session.setAttribute("errorMsg", "Something wrong on server!");
          resp.sendRedirect("admin/index.jsp");
       }

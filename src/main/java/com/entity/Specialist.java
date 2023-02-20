@@ -13,17 +13,18 @@ public class Specialist {
 
    private int id;
    private String specialistName;
+   private String specialistDesc;
 
    public Specialist() {
       super();
       // TODO Auto-generated constructor stub
    }
 
-   public Specialist(int id, String specialistName) {
-      super();
-      this.id = id;
-      this.specialistName = specialistName;
-   }
+    public Specialist(int id, String specialistName, String specialistDesc) {
+        this.id = id;
+        this.specialistName = specialistName;
+        this.specialistDesc = specialistDesc;
+    }
 
    public int getId() {
       return id;
@@ -40,4 +41,12 @@ public class Specialist {
    public void setSpecialistName(String specialistName) {
       this.specialistName = specialistName;
    }
+
+    public String getSpecialistDesc() {
+        return specialistDesc;
+    }
+
+    public void setSpecialistDesc(String specialistDesc) {
+        this.specialistDesc = specialistDesc;
+    }
 }
