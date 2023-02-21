@@ -12,11 +12,17 @@
 <%@page import="com.dao.SpecialistDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:if test="${ empty adminObj }">
+   <c:redirect url="../admin_login.jsp"></c:redirect>
+</c:if>
+
 <!DOCTYPE html>
 <html>
    <head>
       <meta charset="ISO-8859-1">
-      <title>Insert title here</title>
+      <title>Add Specialist | ADMIN</title>
       <%@include file="../component/allcss.jsp"%>
       <style type="text/css">
          .paint-card {
@@ -33,7 +39,7 @@
             <div class="col-md-6 offset-md-3">
                <div class="card paint-card">
                   <div class="card-body">
-                     <p class="fs-3 mb-4 text-center"><b>ADD Specialist</b></p>
+                     <p class="fs-3 mb-4 text-center"><b>ADD SPECIALIST</b></p>
 
                      <c:if test="${not empty errorMsg}">
                         <p class="fs-3 text-center text-danger">${errorMsg}</p>

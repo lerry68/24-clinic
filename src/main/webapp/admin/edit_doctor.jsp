@@ -12,12 +12,16 @@
 <%@page import="com.dao.SpecialistDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:if test="${ empty adminObj }">
+   <c:redirect url="../admin_login.jsp"></c:redirect>
+</c:if>
 
 <!DOCTYPE html>
 <html>
    <head>
       <meta charset="ISO-8859-1">
-      <title>Insert title here</title>
+      <title>Edit Doctor | ADMIN</title>
       <%@include file="../component/allcss.jsp"%>
       <style type="text/css">
          .paint-card {

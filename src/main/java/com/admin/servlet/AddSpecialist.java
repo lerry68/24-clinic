@@ -34,13 +34,13 @@ public class AddSpecialist
           System.out.println(f);
           
          session.setAttribute("succMsg", "Specialist added successfully..");
-         resp.sendRedirect("admin/index.jsp");
+         resp.sendRedirect("admin/specialist.jsp");
       }
       else {
           System.out.println(f);
           
          session.setAttribute("errorMsg", "Something wrong on server!");
-         resp.sendRedirect("admin/index.jsp");
+         resp.sendRedirect("admin/specialist.jsp");
       }
 
    }

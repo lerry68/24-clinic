@@ -41,7 +41,7 @@ public class UpdateSpecialist extends HttpServlet {
          HttpSession session = req.getSession();
 
          if (dao.updateSpecialist(d)) {
-            session.setAttribute("succMsg", "Doctor Updated Sucessfully..");
+            session.setAttribute("succMsg", "Specialist Updated Sucessfully..");
             resp.sendRedirect("admin/specialist.jsp");
          }
          else {

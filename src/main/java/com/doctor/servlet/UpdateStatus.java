@@ -32,7 +32,7 @@ public class UpdateStatus extends HttpServlet {
 
 			HttpSession session = req.getSession();
 
-			if (dao.updateCommentStatus(id, did, comm)) {
+			if (dao.updateCommentStatus(id, did, "Commented", comm)) {
 				session.setAttribute("succMsg", "Comment Updated");
 				resp.sendRedirect("doctor/patient.jsp");
 			} else {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2023 at 07:18 PM
+-- Generation Time: Feb 21, 2023 at 06:28 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.24
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `appointment` (
   `id` int(11) NOT NULL,
   `user_id` int(10) NOT NULL,
-  `full_name` varchar(45) NOT NULL,
+  `fullname` varchar(45) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `age` varchar(5) NOT NULL,
   `appoint_date` varchar(45) NOT NULL,
@@ -39,8 +39,18 @@ CREATE TABLE `appointment` (
   `diseases` varchar(45) NOT NULL,
   `doctor_id` int(11) NOT NULL,
   `address` text NOT NULL,
-  `status` varchar(45) NOT NULL
+  `status` varchar(45) NOT NULL,
+  `comment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`id`, `user_id`, `fullname`, `gender`, `age`, `appoint_date`, `email`, `phno`, `diseases`, `doctor_id`, `address`, `status`, `comment`) VALUES
+(1, 1, 'Supri', 'male', '23', '2023-02-20', 'supri@mail.com', '0831231231', 'Katarak', 2, 'Wahana', 'Commented', 'Silahkan datang ke klinik secara rutin 2x seminggu yaa.'),
+(2, 1, 'Supri', 'male', '23', '2023-02-20', 'supri@mail.com', '0831231231', 'Gigi Berlubang', 1, 'Wahana', 'Pending', ''),
+(3, 2, 'Supri', 'male', '12', '2023-02-20', 'suprigima@fsafj', '09732423', 'Muntaber', 1, 'Kembangan\r\n\r\n', 'Commented', 'Gunakan obat diapet');
 
 -- --------------------------------------------------------
 
@@ -53,7 +63,7 @@ CREATE TABLE `doctor` (
   `full_name` varchar(45) NOT NULL,
   `dob` varchar(45) NOT NULL,
   `qualification` varchar(45) NOT NULL,
-  `specialist` varchar(45) NOT NULL,
+  `specialist` varchar(25) NOT NULL,
   `email` varchar(45) NOT NULL,
   `mobno` varchar(45) NOT NULL,
   `password` varchar(255) NOT NULL
@@ -65,7 +75,7 @@ CREATE TABLE `doctor` (
 
 INSERT INTO `doctor` (`id`, `full_name`, `dob`, `qualification`, `specialist`, `email`, `mobno`, `password`) VALUES
 (1, 'Adi Primata', '1993-03-20', 'Sp.KG', 'Dentist', 'adi.primate@mail.com', '081295738142', 'adi123'),
-(2, 'Aryo Gabus', '1988-12-01', 'Sp.M', 'Ophthalmologist', 'aryo.gabus@mail.com', '081387272927', 'aryo123');
+(2, 'Aryo Gabus', '1988-12-01', 'Sp.M', 'Opthalmologist', 'aryo.gabus@mail.com', '081387272927', 'aryo123');
 
 -- --------------------------------------------------------
 
@@ -75,16 +85,16 @@ INSERT INTO `doctor` (`id`, `full_name`, `dob`, `qualification`, `specialist`, `
 
 CREATE TABLE `specialist` (
   `id` int(11) NOT NULL,
-  `spec_name` varchar(100) NOT NULL
+  `spec_name` varchar(100) NOT NULL,
+  `spec_desc` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `specialist`
 --
 
-INSERT INTO `specialist` (`id`, `spec_name`) VALUES
-(1, 'Dentist'),
-(4, 'Ophthalmologist');
+INSERT INTO `specialist` (`id`, `spec_name`, `spec_desc`) VALUES
+(1, 'Dentist', 'Gigi');
 
 -- --------------------------------------------------------
 
@@ -146,19 +156,19 @@ ALTER TABLE `user_dtls`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `specialist`
 --
 ALTER TABLE `specialist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user_dtls`
