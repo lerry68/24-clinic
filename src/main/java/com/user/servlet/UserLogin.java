@@ -26,9 +26,19 @@ public class UserLogin extends HttpServlet {
 		UserDao dao = new UserDao(DBConnect.getConn());
 		User user = dao.login(email, password);
 
+		String status = user.getStatus();
+                System.out.println(status);
+                
 		if (user != null) {
-			session.setAttribute("userObj", user);
-			resp.sendRedirect("index.jsp");
+                        if (status.equals("Active")) {
+                            session.setAttribute("userObj", user);
+                            resp.sendRedirect("index.jsp");
+                        } else {
+                            System.out.println(status);
+                            session.setAttribute("errorMsg", "Your account is inactive, please contact admin");
+                            resp.sendRedirect("user_login.jsp");
+                        }
+			
 		} else {
 			session.setAttribute("errorMsg", "Wrong Email or Password!");
 			resp.sendRedirect("user_login.jsp");
