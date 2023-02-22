@@ -2,9 +2,9 @@ com\doctor\servlet\UpdateStatus.class
 com\dao\SpecialistDao.class
 com\doctor\servlet\DoctorLogout.class
 com\entity\Doctor.class
-com\dao\AppointmentDAO.class
 com\admin\servlet\UpdateSpecialist.class
 com\admin\servlet\DeleteDoctor.class
+com\admin\servlet\UpdatePatient.class
 com\user\servlet\UserRegister.class
 com\admin\servlet\AddSpecialist.class
 com\user\servlet\AppointmentServlet.class
@@ -12,8 +12,10 @@ com\admin\servlet\AdminLogout.class
 com\admin\servlet\AddDoctor.class
 com\entity\Specialist.class
 com\doctor\servlet\DocotrPasswordChange.class
+com\user\servlet\Detail.class
 com\doctor\servlet\DoctorLogin.class
 com\user\servlet\changePassword.class
+com\admin\servlet\DeletePatient.class
 com\admin\servlet\AdminLogin.class
 com\admin\servlet\UpdateDoctor.class
 com\db\DBConnect.class

@@ -61,12 +61,10 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Full Name</th>
-                                        <th scope="col">Gender</th>
-                                        <th scope="col">Age</th>
                                         <th scope="col">Appoint Date</th>
                                         <th scope="col">Diseases</th>
                                         <th scope="col">Doctor Name</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
 
                                     </tr>
                                 </thead>
@@ -82,50 +80,16 @@
 
                                     <tr>
                                         <th><%=ap.getFullName()%></th>
-                                        <td><%=ap.getGender()%></td>
-                                        <td><%=ap.getAge()%></td>
                                         <td><%=ap.getAppoinDate()%></td>
                                         <td><%=ap.getDiseases()%></td>
                                         <td><%=d.getFullName()%></td>
-                                        <td>
-                                            <%
-                                                if ("Pending".equals(ap.getStatus())) {
-                                            %> <a href="#" class="btn btn-sm btn-primary disabled">Pending</a> <%
-                                            } else {
-                                            %> <a href="#" class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                               data-bs-target="#exampleModal">Show</a> 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Doctor's comment</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                    aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <form action="../addSpecialist" method="post">
+                                        <td><form action="appointmentDetail" method="POST"> 
+                                                <input name="idDetail" type="hidden" value="<%=ap.getId()%>"> 
+                                                <input name="idDokter" type="hidden" value="<%=ap.getDoctorId()%>">
+                                                <input name="fullName" type="hidden" value="<%=ap.getFullName()%>"> 
+                                                <input name="userId" type="hidden" value="<%=ap.getUserId()%>"> 
 
-                                                                <div class="form-group">
-                                                                    <label>Doctor's comment</label> <input type="text"
-                                                                                                                class="form-control" value="<%=ap.getStatus()%>" disabled>
-                                                                </div>
-                                                            </form>
-
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Close</button>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><%
-                                                }
-                                            %>
-
-                                        </td>
+                                                <button  class="btn">Show</button></form></td>
                                     </tr>
                                     <%
                                         }
