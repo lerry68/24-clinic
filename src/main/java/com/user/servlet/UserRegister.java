@@ -24,7 +24,7 @@ public class UserRegister extends HttpServlet {
 			String email = req.getParameter("email");
 			String password = req.getParameter("password");
 
-			User u = new User(fullName, email, password);
+			User u = new User(fullName, email, password, "");
 
 			UserDao dao = new UserDao(DBConnect.getConn());
 

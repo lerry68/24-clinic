@@ -78,13 +78,24 @@
                                                 <c:if test="$kondisi_cuyy">
                                                   disini
                                                 </c:if>
-                                                <a
-                                                    href="../updateUserStatus?id=<%=u.getId()%>"
-                                                    class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to deactive this account?')">Deactive Account</a></td>
+<% if (u.getStatus().equals("Active")) { %>
+                                                <form action="../updateStatusUser" method="POST">
+                                                <input type="hidden" name="id" value="<%=u.getId()%>">
+                                                <input type="hidden" name="status" value="<%=u.getStatus()%>">
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to deactivate this account?')">Deactivate Account</button>
+</form></td>
+<% } else { %>
+                                                <form action="../updateStatusUser" method="POST">
+                                                <input type="hidden" name="id" value="<%=u.getId()%>">
+                                                <input type="hidden" name="status" value="<%=u.getStatus()%>">
+                                                <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Are you sure want to active this account?')">Active Account</button>
+</form></td>
+<% }%>
+                                                
                                         </tr>
                                         <%
                                             }
-                                        %>
+                                        %>  
 
 
 

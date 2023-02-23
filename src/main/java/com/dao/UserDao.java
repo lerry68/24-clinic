@@ -115,10 +115,14 @@ public class UserDao {
         boolean f = false;
 
         try {
-            String sql = "update user_dtls set status=? where id=?";
+            String sql = "update user_dtls set status='notActive' where id=?";
+
+            if (status.equals("notActive")) {
+               sql = "update user_dtls set status='Active' where id=?";
+            }
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, status);
-            ps.setInt(4, id);
+//            ps.setString(1, status);
+            ps.setInt(1, id);
             int i = ps.executeUpdate();
 
             if (i == 1) {
