@@ -64,20 +64,17 @@
                                             List<User> list2 = dao.getAllUser();
                                             for (User u : list2) {
                                         %>
-                                        <tr class="text-center">
+                                        <tr class="text-center" >
                                             <td><%=u.getFullName()%></td>
                                             <td><%=u.getEmail()%></td>
                                             <td><%=u.getPassword()%></td>
                                             <td><%=u.getStatus()%></td>
 
-                                            <td>
+                                            <td style="display: flex; gap: 5px; align-items: center; justify-content: center;">
 
                                                 <a href="edit_user.jsp?id=<%=u.getId()%>"
                                                    class="btn btn-sm btn-primary">Edit</a> 
 
-                                                <c:if test="$kondisi_cuyy">
-                                                  disini
-                                                </c:if>
 <% if (u.getStatus().equals("Active")) { %>
                                                 <form action="../updateStatusUser" method="POST">
                                                 <input type="hidden" name="id" value="<%=u.getId()%>">
